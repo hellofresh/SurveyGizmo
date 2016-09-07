@@ -1,8 +1,10 @@
-
 import hashlib
 
 import requests
+import requests.packages.urllib3
 from surveygizmo import oauth_helper
+
+requests.packages.urllib3.disable_warnings()
 
 
 class Resource(object):
