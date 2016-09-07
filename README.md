@@ -32,7 +32,7 @@ sg.api.surveyresponse.list('39501')
 
 ## Authentication
 
-Currently, `user:pass` and `user:md5` are the only supported authentication methods. There is the `oauth_helper` module that is built on top of [rauth](https://github.com/litl/rauth), but it remains untested. You can try it I guess.
+Currently, `user:pass`, `user:md5`, and `api_token` are the only supported authentication methods. There is the `oauth_helper` module that is built on top of [rauth](https://github.com/litl/rauth), but it remains untested. You can try it I guess.
 
 #### user:pass
 ```python
@@ -48,6 +48,13 @@ sg.config.username = 'username'
 sg.config.md5_hash = '5f4dcc3b5aa765d61d8327deb882cf99'
 ```
 or you can provide a password to `config.password` and it will be automatically hashed.
+
+
+#### api_token
+```python
+sg.config.auth_method = 'user:api_token'
+sg.config.api_token = 'token'
+```
 
 #### oauth
 ```python

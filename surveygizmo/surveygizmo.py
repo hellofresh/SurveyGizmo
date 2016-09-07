@@ -26,6 +26,7 @@ class Config(object):
         self.username = kwargs.get('username', None)
         self.password = kwargs.get('password', None)
         self.md5_hash = kwargs.get('md5_hash', None)
+        self.api_token = kwargs.get('api_token', None)
         self.consumer_key = kwargs.get('consumer_key', None)
         self.consumer_secret = kwargs.get('consumer_secret', None)
         self.access_token = kwargs.get('access_token', None)
@@ -40,12 +41,15 @@ class Config(object):
     def validate(self):
         """ Perform validation check on properties.
         """
-        if not self.auth_method in ['user:pass', 'user:md5', 'oauth']:
+        if not self.auth_method in ['user:pass', 'user:md5', 'oauth', 'api_token']:
             raise ImproperlyConfigured("No authentication method provided.")
         else:
             if self.auth_method == "user:pass":
                 if not self.username or not self.password:
                     raise ImproperlyConfigured("Username and password for 'user:pass' authentication.")
+            elif self.auth_method == "api_token":
+                if not self.api_token:
+                    raise ImproperlyConfigured("API Token for 'api_token' authentication.")
             elif self.auth_method == "user:md5":
                 if not self.username:
                     raise ImproperlyConfigured("Username required for 'user:md5' authentication.")
