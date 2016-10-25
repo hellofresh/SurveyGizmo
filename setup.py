@@ -16,7 +16,7 @@ setup(
     keywords="Survey Gizmo SurveyGizmo surveygizmo",
     url='https://github.com/rpkilby/SurveyGizmo/',
     packages=find_packages(),
-    install_requires=['requests==2.11.1', 'rauth'],
+    install_requires=['requests==2.11.1', 'rauth==0.7.2'],
     license='BSD License',
     classifiers=(
         'Development Status :: 3 - Alpha',
