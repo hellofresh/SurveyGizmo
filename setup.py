@@ -7,14 +7,13 @@ README = open(os.path.join(os.path.dirname(__file__), 'README.md')).read()
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='SurveyGizmo',
+    name='surveygizmo-hellofresh',
     version=__version__,
     description='A Python Wrapper for SurveyGizmo\'s restful API service.',
     long_description=README,
     author='Ryan P Kilby',
     author_email='rpkilby@ncsu.edu',
     keywords="Survey Gizmo SurveyGizmo surveygizmo",
-    url='https://github.com/rpkilby/SurveyGizmo/',
     packages=find_packages(),
     install_requires=['requests==2.11.1', 'rauth==0.7.2'],
     license='BSD License',
