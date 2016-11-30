@@ -4,7 +4,6 @@ setup(
     name='surveygizmoHF',
     version="1.0.0",
     description='A Python Wrapper for SurveyGizmo\'s restful API service.',
-    #long_description=README,
     author='Ryan P Kilby',
     author_email='rpkilby@ncsu.edu',
     keywords="Survey Gizmo SurveyGizmo surveygizmo",
