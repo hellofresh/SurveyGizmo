@@ -1,16 +1,16 @@
-import os
+#import os
 from setuptools import setup, find_packages
-from surveygizmo import __version__
+#from surveygizmo import __version__
 
-README = open(os.path.join(os.path.dirname(__file__), 'README.md')).read()
+#README = open(os.path.join(os.path.dirname(__file__), 'README.md')).read()
 
-os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
+#os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='surveygizmoHF',
-    version=__version__,
+    version="1.0.0",
     description='A Python Wrapper for SurveyGizmo\'s restful API service.',
-    long_description=README,
+    #long_description=README,
     author='Ryan P Kilby',
     author_email='rpkilby@ncsu.edu',
     keywords="Survey Gizmo SurveyGizmo surveygizmo",
