@@ -2,13 +2,13 @@ from setuptools import setup, find_packages
 
 setup(
     name='surveygizmoHF',
-    version="1.0.0",
+    version="1.0.1",
     description='A Python Wrapper for SurveyGizmo\'s restful API service.',
     author='Ryan P Kilby',
     author_email='rpkilby@ncsu.edu',
     keywords="Survey Gizmo SurveyGizmo surveygizmo",
     packages=find_packages(),
-    install_requires=['requests==2.11.1', 'rauth==0.7.2'],
+    install_requires=['requests=>2.11.1', 'rauth=>0.7.2'],
     license='BSD License',
     classifiers=(
         'Development Status :: 3 - Alpha',
